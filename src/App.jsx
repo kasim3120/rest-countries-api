@@ -101,7 +101,7 @@ const App = () => {
       <Header onClick={darkModeBtn} darkMode={darkMode}/>
       <Routes>
         <Route 
-          path='/:rest-countries-api'
+          path='/rest-countries-api'
           element={
             <div className={`appBody ${darkMode ? 'darkMode' : ''}`}>
               <div className='inputs'>
