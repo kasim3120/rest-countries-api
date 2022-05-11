@@ -1,0 +1,256 @@
+:root {
+    --dark-mode-elements: hsl(209, 23%, 22%);
+    --dark-mode-bg: hsl(207, 26%, 17%);
+    --light-mode-elements: hsl(0, 0%, 100%);
+    --light-mode-bg: hsl(0, 0%, 98%);
+}
+.app {
+background-color: var(--light-mode-bg);
+min-height: 100vh;
+height: 100%;
+&.darkMode{
+    background-color: var(--dark-mode-bg);
+    color: white;
+}
+
+.header {
+background-color: white;
+box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+padding: 0 50px;
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding:15px;
+}
+.darkModeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+&.darkMode{
+    background-color: var(--dark-mode-elements);
+    color: white;
+}
+}
+
+.appBody {
+margin: 0 auto;
+max-width: 1440px;
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:15px auto;
+    padding: 15px;
+    .searchInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    width: 290px;
+    padding: 5px;
+    border-radius: 5px;
+    gap: 5px;
+    input {
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        font-size: 18px;
+    }
+    &.darkMode{
+        background-color: var(--dark-mode-elements);
+        color: white;
+        ::placeholder{
+        color:#fff;
+        }
+    }
+    }
+    .selectRegion {
+    width: 200px;
+
+    select {
+        padding: 10px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        &.darkMode{
+        background-color: var(--dark-mode-elements);
+        color: white;
+        }
+    }
+    &.darkMode{
+        background-color: var(--dark-mode-elements);
+        color: white;
+    }
+    }
+}
+
+.countries {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    gap: 30px;
+    .country {
+    background-color: white;
+    width: 275px;
+    height: 370px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    .flagContainer {
+        height: 183.33px;
+        width: 100%;
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    }
+    .name {
+        margin-bottom: 10px;
+    }
+    .details {
+        display: flex;
+        flex-direction:column;
+        padding: 15px;
+        margin: 5px;
+        h3{
+        margin-bottom: 20px;
+        }
+        p{
+        margin-bottom: 20px;
+        }
+    }
+    }
+    .darkMode{
+    background-color: var(--dark-mode-elements);
+    color: white;
+    }
+}
+}
+
+.countryDetails {
+margin: 0px auto 0;
+padding: 15px;
+max-width: 1440px;
+min-height: 100vh;
+.back {
+    background-color: white;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    &.darkMode{
+    background-color: var(--dark-mode-elements);
+    color: white;
+    }
+}
+.countryDetailsBody {
+    margin: 15px auto 0;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:40px;
+    .imgContainer {
+    flex: 0.5;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+    .info {
+    flex: 0.5;
+    h2 {
+        margin-bottom: 20px;
+    }
+    .infoContainer {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin-bottom: 45px;
+        .leftInfo, .rightInfo{
+        width: 100%;
+        margin: 0 15px;
+        p{
+            padding: 10px 0;
+            span {
+            color: gray;
+
+            }
+            &.darkMode {
+                background-color: var(--dark-mode-elements);
+                color: white;
+            }
+        }
+        }
+    }
+    .borderCountry {
+        padding: 15px 15px;
+        background-color: white;
+        display:  inline-block;
+        margin: 10px;
+        cursor: pointer;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        &.darkMode{
+        background-color: var(--dark-mode-elements);
+        color: white;
+        }
+    }
+    &.darkMode{
+        color: white;
+    }
+    }
+}
+}
+}
+@media (max-width: 800px) {
+.countryDetailsBody {
+    flex-direction: column;
+}
+.infoContainer {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.leftInfo {
+    margin-bottom: 20px;
+}
+}
+
+@media (max-width: 720px) {
+.inputs {
+    flex-direction: column;
+    margin-bottom: 15px;
+    .searchInput {
+    margin-bottom: 20px;
+    }
+}
+.darkModeBtn {
+    font-size: 12px;
+    flex: 0.5;
+    justify-content: flex-end;
+}
+.logo {
+    flex: 0.5;
+    font-size: 17px;
+}
+}
