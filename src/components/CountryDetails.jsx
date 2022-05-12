@@ -63,15 +63,15 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 			<h2>{name}</h2>
 			<div className="infoContainer">
 				<div className="leftInfo">
-					<p>Native Name: <span className={`${darkMode ? 'darkMode' : ''}`}>{nativeName}</span></p>
-					<p>Population: <span className={`${darkMode ? 'darkMode' : ''}`}>{population}</span></p>
-					<p>Region: <span className={`${darkMode ? 'darkMode' : ''}`}>{region}</span></p>
-					<p>Sub region: <span className={`${darkMode ? 'darkMode' : ''}`}>{subregion}</span></p>
+					<p>Native Name : <span className={`${darkMode ? 'darkMode' : ''}`}>{nativeName}</span></p>
+					<p>Population : <span className={`${darkMode ? 'darkMode' : ''}`}>{population}</span></p>
+					<p>Region : <span className={`${darkMode ? 'darkMode' : ''}`}>{region}</span></p>
+					<p>Sub region : <span className={`${darkMode ? 'darkMode' : ''}`}>{subregion}</span></p>
 				</div>
 					<div className="rightInfo">
-						<p>Capital: <span className={`${darkMode ? 'darkMode' : ''}`}>{capital}</span></p>
-						<p>Top-level Domain: <span className={`${darkMode ? 'darkMode' : ''}`}>{topLevelDomain}</span></p>
-						<p>Currencies: {currencies.map(currency => {
+						<p>Capital : <span className={`${darkMode ? 'darkMode' : ''}`}>{capital}</span></p>
+						<p>Top-level Domain : <span className={`${darkMode ? 'darkMode' : ''}`}>{topLevelDomain}</span></p>
+						<p>Currencies : {currencies.map(currency => {
 							if(currencies.indexOf(currency) !== currencies.length -1){
 								return (
 									<span className={`${darkMode ? 'darkMode' : ''}`}>
@@ -87,7 +87,7 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 							}
 						})}
 						</p>
-						<p>Languages: 
+						<p>Languages : 
 							{languages.map((language) => {
 								if(languages.indexOf(language) !== languages.length - 1){
 									return (
@@ -107,7 +107,7 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 						</p>
 						</div>
 						</div>
-						Border Countries:
+						Border Countries :
 						{
 							borders.length ? (
 								borders.map((border) => (
@@ -118,16 +118,16 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 											refetch()
 											navigate(`/${border}`)
                     }}
-                  >
-                  {border}
+                >
+                {border}
                 </div>
-              ))
+            ))
             ):(
-              <div className={`noBorderCountry ${darkMode ? 'darkMode' : ''}`}>
+            <div className={`noBorderCountry ${darkMode ? 'darkMode' : ''}`}>
                 <p>No borders....</p>
-              </div>
+            </div>
             )
-          }
+        }
 				</div>
 			</div>
 		</div>
