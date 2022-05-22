@@ -21,22 +21,22 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 	let borders = []
 	
 	countries.forEach((country) => {
-		if(country.cca3 === params.countryName) {
-			name = country.name.common
-			flags = country.flags.svg
-			nativeName = country.name.official
-			population = country.population
-			region = country.region
-			subregion = country.subregion
-			capital = country.capital
-			topLevelDomain = country.tld
-			Object.values(country.currencies).forEach((currency) => 
-			{
-				currencies.push(currency.name)
+	 if(country.cca3 === params.countryName) {
+	  name = country.name.common
+	  flags = country.flags.svg
+	  nativeName = country.name.official
+	  population = country.population
+	  region = country.region
+	  subregion = country.subregion
+	  capital = country.capital
+	  topLevelDomain = country.tld
+	   	Object.values(country.currencies).forEach((currency) => 
+	    {
+	  		currencies.push(currency.name)
 			});
 			Object.values(country.languages).forEach((language) => 
 			{
-					languages.push(language)
+				languages.push(language)
 			});
 			country.borders?.forEach((border) => 
 			{
