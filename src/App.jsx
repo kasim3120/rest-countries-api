@@ -29,6 +29,7 @@ const App = () => {
       console.log(error)
     }
   },[])
+  
   //fetch all country
   const fetchData = async() => {
     const response = await fetch('https://restcountries.com/v3.1/all')
@@ -39,8 +40,8 @@ const App = () => {
       return
     }
     setCountries(data)
-    console.log(data)
   } 
+  
   //search country items
   const searchCountries = () => {
     const searchValue = countriesInputRef.current.value
@@ -62,6 +63,7 @@ const App = () => {
       fetchData()
     }
   }
+  
   //select country region
   const selectRegion = () => {
     const selectValue = regionRef.current.value
@@ -104,12 +106,13 @@ const App = () => {
           path='/rest-countries-api'
           element={
             <div className={`appBody ${darkMode ? 'darkMode' : ''}`}>
+              
               <div className='inputs'>
                 <div className={`searchInput ${darkMode ? 'darkMode' : ''}`}>
                   <SearchIcon />
-                  <input type="text" placeholder='Search for a country...' ref={countriesInputRef} onChange={searchCountries}/>
+                  <input type="text" placeholder='Search for a country...' ref={countriesInputRef} onChange={searchCountries} />
                 </div>
-                <div className='selectRegion' >
+                <div className='selectRegion'>
                   <select className={`${darkMode ? 'darkMode' : ''}`} ref={regionRef} onChange={selectRegion}>
                     <option>All</option>
                     <option>Africa</option>
@@ -120,6 +123,7 @@ const App = () => {
                   </select>
                 </div>
               </div>
+              
               <div className='countries' >
                 {!noCountries ? (
                   countries.map((country) => (
