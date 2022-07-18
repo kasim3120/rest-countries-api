@@ -1,0 +1,262 @@
+:root {
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-bg: hsl(207, 26%, 17%);
+  --light-mode-elements: hsl(0, 0%, 100%);
+  --light-mode-bg: hsl(0, 0%, 98%);
+}
+
+.app {
+  background-color: var(--light-mode-bg);
+  min-height: 100vh;
+  height: 100%;
+}
+.app.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: white;
+}
+.app .header {
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 0 50px;
+}
+.app .header .headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.app .header .darkModeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.app .header.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .appBody {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.app .appBody .inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto;
+  padding: 15px;
+}
+.app .appBody .inputs .searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  width: 290px;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 5px;
+}
+.app .appBody .inputs .searchInput input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+}
+.app .appBody .inputs .searchInput.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .appBody .inputs .searchInput.darkMode ::-moz-placeholder {
+  color: #fff;
+}
+.app .appBody .inputs .searchInput.darkMode :-ms-input-placeholder {
+  color: #fff;
+}
+.app .appBody .inputs .searchInput.darkMode ::placeholder {
+  color: #fff;
+}
+.app .appBody .inputs .selectRegion {
+  width: 200px;
+}
+.app .appBody .inputs .selectRegion select {
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.app .appBody .inputs .selectRegion select.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .appBody .inputs .selectRegion.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .appBody .countries {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  gap: 100px;
+}
+.app .appBody .countries .country {
+  background-color: white;
+  width: 275px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.app .appBody .countries .country .flagContainer {
+  height: 183.33px;
+  width: 100%;
+}
+.app .appBody .countries .country .flagContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.app .appBody .countries .country .name {
+  margin-bottom: 10px;
+}
+.app .appBody .countries .country .details {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 5px;
+}
+.app .appBody .countries .country .details h3 {
+  margin: 5px;
+}
+.app .appBody .countries .country .details p {
+  margin: 5px;
+}
+.app .appBody .countries .darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .countryDetails {
+  margin: 0px auto 0;
+  padding: 15px;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+.app .countryDetails .back {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.app .countryDetails .back.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .countryDetails .countryDetailsBody {
+  margin: 15px auto 0;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+.app .countryDetails .countryDetailsBody .imgContainer {
+  flex: 0.5;
+}
+.app .countryDetails .countryDetailsBody .imgContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.app .countryDetails .countryDetailsBody .info {
+  flex: 0.5;
+}
+.app .countryDetails .countryDetailsBody .info h2 {
+  margin-bottom: 20px;
+}
+.app .countryDetails .countryDetailsBody .info .infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+.app .countryDetails .countryDetailsBody .info .infoContainer .leftInfo, .app .countryDetails .countryDetailsBody .info .infoContainer .rightInfo {
+  width: 100%;
+  margin: 0 15px;
+}
+.app .countryDetails .countryDetailsBody .info .infoContainer .leftInfo p, .app .countryDetails .countryDetailsBody .info .infoContainer .rightInfo p {
+  padding: 10px 0;
+}
+.app .countryDetails .countryDetailsBody .info .infoContainer .leftInfo p span, .app .countryDetails .countryDetailsBody .info .infoContainer .rightInfo p span {
+  margin: 5px;
+  color: gray;
+}
+.app .countryDetails .countryDetailsBody .info .infoContainer .leftInfo p.darkMode, .app .countryDetails .countryDetailsBody .info .infoContainer .rightInfo p.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .countryDetails .countryDetailsBody .info .borderCountry {
+  padding: 15px 15px;
+  background-color: white;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+.app .countryDetails .countryDetailsBody .info .borderCountry.darkMode {
+  background-color: var(--dark-mode-elements);
+  color: white;
+}
+.app .countryDetails .countryDetailsBody .info.darkMode {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .countryDetailsBody {
+    flex-direction: column;
+  }
+  .infoContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .leftInfo {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .inputs {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .inputs .searchInput {
+    margin-bottom: 20px;
+  }
+  .darkModeBtn {
+    font-size: 12px;
+    flex: 0.5;
+    justify-content: flex-end;
+  }
+  .logo {
+    flex: 0.5;
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=App.css.map */
