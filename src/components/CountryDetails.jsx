@@ -93,7 +93,7 @@ const CountryDetails = ({darkMode, countries, refetch}) => {
 	 if(languages.indexOf(language) !== languages.length - 1){
 	  return (
 	   <span key={language} className={`${darkMode ? 'darkMode' : ''}`}>
-            language}
+            {language}
            </span>
           )
          }
